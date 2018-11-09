@@ -1,0 +1,67 @@
+body{
+	font-family: 'Handlee', cursive;
+	font-weight: bold;
+	font-size: 1em;
+	background-color: #FADEB0;
+}
+#container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-top: 25px;
+}
+#new{
+	width: 20%;
+	margin-left:40%;
+	padding: 10px 5px;
+	background-color: #BFA16F;
+	border-color: #7F6B4A;
+	color:#A60E0A;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+#firstPlayer, #secondPlayer{
+	
+	
+		display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-top: 25px;
+}
+h2,h3{
+	font-family: 'Patrick Hand', cursive;
+	font-size: 2em;
+}
+h1{
+
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	font-size:4em;
+
+}
+button{
+	padding: 5px;
+	width: 150px;
+	margin-bottom: 10px;
+	text-shadow: ;
+	font-family: 'Courgette', cursive;
+
+}
+p{
+	text-align: center;
+	font-size: 3em;
+
+}

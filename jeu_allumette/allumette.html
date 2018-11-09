@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="monApp">
+<head>
+	<title>Jeu des allumettes</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="allumette.css">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Courgette|Handlee" rel="stylesheet">
+
+	<script type="text/javascript" src="utilities.js"></script>
+</head>
+<body ng-controller="myGameController">
+	<h1> Jeu des allumettes </h1>
+	<ul><h2>les règles du jeu:</h2>
+		<li>
+			Ce jeu se joue à deux
+		</li>
+		<li>
+			Vous êtes devant un certain nombre d'allumettes qui peut varier d'une partie à l'autre
+		</li>
+		<li>
+			A chaque tour, il faut en enlever 1, 2 ou 3 allumettes</li>
+		<li>
+		 	Celui qui prend la dernière gagne la partie
+		</li>
+	</ul>
+	<button id="new" ng-click="newGame()"  ng-model="visible" ng-model='state1' ng-model='state2'>Nouvelle partie</button>
+	<div id="container">
+		<div id="firstPlayer">
+			<h3>joueur1</h3>
+			<button ng_click='player1(1)'ng-disabled='state1'>retirer 1 allumette</button>
+			<button ng_click='player1(2)'ng-disabled='state1'>retirer 2 allumettes</button1>
+			<button ng_click='player1(3)'ng-disabled='state1'>retirer 3 allumettes</button>
+
+		</div>
+		<div id="gameState" ng_repeat="allumette in allumettes">
+			<img ng-src="{{allumette.src}}">
+
+		</div>
+		<div id="secondPlayer">
+			<h3>joueur2</h3>
+			<button ng_click='player2(1)' ng-disabled='state2'>retirer 1 allumette</button>
+			<button ng_click='player2(2)' ng-disabled='state2'>retirer 2 allumettes</button>
+			<button ng_click='player2(3)' ng-disabled='state2'>retirer 3 allumettes</button>
+
+		</div>
+	</div>
+	<p ng-show="visible">réflichissez avant d'agir! il ne vous reste que {{nbreAllumettes}} allumettes</p>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script type="text/javascript" src="allumette.js"></script>
+</body>
+</html>
